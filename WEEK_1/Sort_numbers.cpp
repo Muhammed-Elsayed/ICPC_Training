@@ -7,30 +7,35 @@ using namespace std;
 
 int main()
 {
-    
-    int num1, num2 , num3, min_num , max_num;
+    int A, B, C;
+    cin >> A >> B >> C;
 
-    cin >> num1 >> num2 >> num3 ;
 
-    min_num = num1;
-    max_num = num1;
+    if ( A >= B and A >= C){
+        if (B >= C)
+          cout <<  C << endl << B << endl << A << endl ;
 
-    if (num2 >= max_num)
-       max_num = num2;
-    
-    else
-       min_num = num2;
-
-    if (num3 >= max_num)
-       max_num = num3;
-    
-    else {
-        if(min_num > num3){
-            min_num = num3;
-        }
+        else
+           cout <<  B << endl << C << endl << A << endl ;
     }
-     
 
+    else if( B >= A and B >= C){
+        if (A >= C)
+          cout <<  C << endl << A <<endl << B<< endl  ;
+
+        else
+          cout <<  A << endl << C <<endl << B << endl ;
+    }
+
+    else if (C >= A and C >= B)
+        if (A >= B)
+          cout <<  B << endl << A <<endl << C << endl ;
+
+        else 
+          cout <<  A << endl << B <<endl << C<< endl  ;
+    
+
+    cout <<  endl << A << endl << B <<endl << C ;
 
     return 0;
     
